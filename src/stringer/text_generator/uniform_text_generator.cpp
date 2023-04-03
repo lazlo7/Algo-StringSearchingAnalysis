@@ -28,3 +28,8 @@ DNATextGenerator::DNATextGenerator()
     : UniformTextGenerator("ACGT")
 {
 }
+
+const char* DNATextGenerator::name() const
+{
+    return "DNA";
+}

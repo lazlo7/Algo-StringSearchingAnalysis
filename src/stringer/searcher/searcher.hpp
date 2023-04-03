@@ -1,9 +1,11 @@
 #pragma once
 
+#include "../nameable.hpp"
+
 #include <string>
 #include <vector>
 
-class Searcher {
+class Searcher : public Nameable {
 public:
     using Indices = std::vector<size_t>;
     virtual ~Searcher() = default;

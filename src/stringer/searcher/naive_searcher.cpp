@@ -31,3 +31,8 @@ Searcher::Indices NaiveSearcher::search(
 
     return indices;
 }
+
+const char* NaiveSearcher::name() const
+{
+    return "Naive";
+}

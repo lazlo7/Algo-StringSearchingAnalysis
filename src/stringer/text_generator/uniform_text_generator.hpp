@@ -19,4 +19,5 @@ class DNATextGenerator : public UniformTextGenerator {
 public:
     DNATextGenerator();
     ~DNATextGenerator() = default;
+    virtual const char* name() const override;
 };
