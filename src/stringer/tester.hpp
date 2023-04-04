@@ -1,11 +1,7 @@
 #pragma once
 
-#include "searcher/naive_searcher.hpp"
 #include "searcher/searcher.hpp"
-
 #include "text_generator/text_generator.hpp"
-#include "text_generator/uniform_text_generator.hpp"
-
 #include <chrono>
 #include <memory>
 #include <string>

@@ -1,16 +1,20 @@
 #include "tester.hpp"
 
+#include "searcher/naive_searcher.hpp"
+
+#include "text_generator/uniform_text_generator.hpp"
+
+#include "util.hpp"
 #include <fstream>
 #include <iostream>
 #include <random>
 #include <stdexcept>
-#include "util.hpp"
 
 Tester::Tester(size_t test_repeat_count)
     : _test_repeat_count(test_repeat_count)
 {
     _searchers.push_back(std::make_shared<NaiveSearcher>());
-    _text_generators.push_back(std::make_shared<UniformTextGenerator>());
+    _text_generators.push_back(std::make_shared<DNATextGenerator>());
 }
 
 Tester::TestResult Tester::runTest(
@@ -44,6 +48,13 @@ void Tester::runTests(const std::string& output_filename)
 
     for (const auto& text_generator : _text_generators) {
         for (const auto text_length : { 10000, 100000 }) {
+            const auto text = text_generator->generate(text_length);
+            for (const auto max_wildcard_count : { 0, 4 }) {
+                for (size_t pattern_length = 10; pattern_length <= 30; pattern_length += 5) {
+                    const auto pattern = getRandomPattern(text, pattern_length, max_wildcard_count);
+                    std::cout << pattern << '\n';
+                }
+            }
         }
     }
 
@@ -52,6 +63,7 @@ void Tester::runTests(const std::string& output_filename)
 
 /*
 Pattern length must be greater or equal to max wildcard count.
+Text length must be greater or equal to pattern length.
 */
 std::string Tester::getRandomPattern(
     const std::string& text,
@@ -66,12 +78,18 @@ std::string Tester::getRandomPattern(
         throw std::invalid_argument("Text length must be greater or equal to pattern length!");
     }
 
-    const auto wildcard_count = getRandomNumber(0, max_wildcard_count);
+    const auto wildcard_count = max_wildcard_count == 0
+        ? 0
+        : util::getRandomNumber(static_cast<size_t>(1), max_wildcard_count);
     const auto excerpt_length = pattern_length - wildcard_count;
-    const auto pattern_index = getRandomNumber(0, text.size() - excerpt_length);
-    std::string pattern = text.substr(pattern_index, excerpt_length); 
+    const auto pattern_index = util::getRandomNumber(static_cast<size_t>(0), text.size() - excerpt_length);
+
+    std::string pattern = text.substr(pattern_index, excerpt_length);
+    pattern.reserve(pattern.size() + wildcard_count);
 
     for (size_t i = 0; i < wildcard_count; ++i) {
-        pattern += '?';
+        pattern.insert(pattern.begin() + util::getRandomNumber(static_cast<size_t>(0), pattern.size()), '?');
     }
+
+    return pattern;
 }
