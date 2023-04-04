@@ -5,7 +5,9 @@
 #include "text_generator/uniform_text_generator.hpp"
 
 #include "util.hpp"
+#include <chrono>
 #include <fstream>
+#include <ios>
 #include <iostream>
 #include <random>
 #include <stdexcept>
@@ -25,26 +27,32 @@ Tester::TestResult Tester::runTest(
     TestResult test_result;
 
     for (size_t i = 0; i < _test_repeat_count; ++i) {
-        auto start = std::chrono::high_resolution_clock::now();
+        const auto start = std::chrono::high_resolution_clock::now();
         searcher->search(text, pattern, test_result.char_comparisons);
-        auto end = std::chrono::high_resolution_clock::now();
+        const auto end = std::chrono::high_resolution_clock::now();
 
-        test_result.duration += std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+        test_result.duration += std::chrono::duration_cast<std::chrono::microseconds>(end - start);
     }
 
     test_result.duration /= _test_repeat_count;
-    test_result.char_comparisons /= _test_repeat_count;
+    test_result.char_comparisons = static_cast<size_t>(static_cast<double>(test_result.char_comparisons) / _test_repeat_count);
 
     return test_result;
 }
 
 void Tester::runTests(const std::string& output_filename)
 {
-    std::ofstream output_file { output_filename };
+    std::ofstream output_file { output_filename, std::ios_base::out | std::ios_base::trunc };
     if (!output_file.is_open()) {
         std::cout << "[Error] Failed to open output file!\n";
         return;
     }
+
+    // Prepare .csv header.
+    output_file << "text_generator;text_length;wildcards;pattern_length;searcher;"
+                << "test_result_duration;test_result_char_comparisons\n";
+
+    size_t current_test_number = 0;
 
     for (const auto& text_generator : _text_generators) {
         for (const auto text_length : { 10000, 100000 }) {
@@ -52,7 +60,31 @@ void Tester::runTests(const std::string& output_filename)
             for (const auto max_wildcard_count : { 0, 4 }) {
                 for (size_t pattern_length = 100; pattern_length <= 3000; pattern_length += 100) {
                     const auto pattern = getRandomPattern(text, pattern_length, max_wildcard_count);
-                    std::cout << pattern << '\n';
+                    for (const auto& searcher : _searchers) {
+                        std::cout << "Test #" << ++current_test_number << '\t'
+                                  << "Text: [generator=" << text_generator->name()
+                                  << ", length=" << text_length << " + "
+                                  << searcher->name() << " searcher + "
+                                  << "Pattern: [wildcards=" << static_cast<bool>(max_wildcard_count)
+                                  << ", length=" << pattern_length
+                                  << '\n';
+
+                        const auto test_result = runTest(searcher, text, pattern);
+                        output_file << text_generator->name() << ';'
+                                    << text_length << ';'
+                                    << static_cast<bool>(max_wildcard_count) << ';'
+                                    << pattern_length << ';'
+                                    << searcher->name() << ';'
+                                    << test_result.duration << ';'
+                                    << test_result.char_comparisons << ';'
+                                    << '\n';
+
+                        std::cout << "\t\t\t---> Result: "
+                                  << test_result.duration
+                                  << ", char comparisons: "
+                                  << test_result.char_comparisons
+                                  << '\n';
+                    }
                 }
             }
         }

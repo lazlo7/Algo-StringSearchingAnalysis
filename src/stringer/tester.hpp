@@ -10,7 +10,7 @@
 class Tester {
 public:
     struct TestResult {
-        std::chrono::nanoseconds duration;
+        std::chrono::microseconds duration;
         size_t char_comparisons;
     };
 
