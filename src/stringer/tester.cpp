@@ -50,7 +50,7 @@ void Tester::runTests(const std::string& output_filename)
         for (const auto text_length : { 10000, 100000 }) {
             const auto text = text_generator->generate(text_length);
             for (const auto max_wildcard_count : { 0, 4 }) {
-                for (size_t pattern_length = 10; pattern_length <= 30; pattern_length += 5) {
+                for (size_t pattern_length = 100; pattern_length <= 3000; pattern_length += 100) {
                     const auto pattern = getRandomPattern(text, pattern_length, max_wildcard_count);
                     std::cout << pattern << '\n';
                 }
