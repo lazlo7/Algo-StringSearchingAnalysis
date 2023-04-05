@@ -76,7 +76,7 @@ void Tester::runTests(const std::string& output_filename)
                                     << pattern_length << ';'
                                     << searcher->name() << ';'
                                     << test_result.duration.count() << ';'
-                                    << test_result.char_comparisons << ';'
+                                    << test_result.char_comparisons
                                     << '\n';
 
                         std::cout << "\t\t\t---> Result: "
