@@ -24,6 +24,8 @@ public:
         const std::string& pattern);
 
 private:
+    static constexpr size_t kPatternRepeatCount = 100;
+
     static std::string getRandomPattern(
         const std::string& text,
         size_t pattern_length,
