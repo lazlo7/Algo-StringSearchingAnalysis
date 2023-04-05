@@ -10,8 +10,8 @@
 class Tester {
 public:
     struct TestResult {
-        std::chrono::microseconds duration;
-        size_t char_comparisons;
+        std::chrono::nanoseconds duration{};
+        size_t char_comparisons{};
     };
 
     Tester(size_t test_repeat_count);

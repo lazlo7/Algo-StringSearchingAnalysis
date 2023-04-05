@@ -31,11 +31,11 @@ Tester::TestResult Tester::runTest(
         searcher->search(text, pattern, test_result.char_comparisons);
         const auto end = std::chrono::high_resolution_clock::now();
 
-        test_result.duration += std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        test_result.duration += std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
     }
 
     test_result.duration /= _test_repeat_count;
-    test_result.char_comparisons = static_cast<size_t>(static_cast<double>(test_result.char_comparisons) / _test_repeat_count);
+    test_result.char_comparisons = static_cast<size_t>(1.0 * test_result.char_comparisons / _test_repeat_count);
 
     return test_result;
 }
@@ -50,7 +50,7 @@ void Tester::runTests(const std::string& output_filename)
 
     // Prepare .csv header.
     output_file << "text_generator;text_length;wildcards;pattern_length;searcher;"
-                << "test_result_duration;test_result_char_comparisons\n";
+                << "test_result_duration_nano;test_result_char_comparisons\n";
 
     size_t current_test_number = 0;
 
@@ -81,7 +81,7 @@ void Tester::runTests(const std::string& output_filename)
 
                         std::cout << "\t\t\t---> Result: "
                                   << test_result.duration.count()
-                                  << "ms, char comparisons: "
+                                  << "ns, char comparisons: "
                                   << test_result.char_comparisons
                                   << '\n';
                     }
