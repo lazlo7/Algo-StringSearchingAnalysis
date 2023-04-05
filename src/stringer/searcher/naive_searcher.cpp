@@ -6,7 +6,6 @@ Searcher::Indices NaiveSearcher::search(
     size_t& char_comparisons)
 {
     Searcher::Indices indices;
-    char_comparisons = 0;
 
     for (size_t i = 0; i < text.size(); ++i) {
         bool found = true;
