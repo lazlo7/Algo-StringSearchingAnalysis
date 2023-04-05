@@ -75,13 +75,13 @@ void Tester::runTests(const std::string& output_filename)
                                     << static_cast<bool>(max_wildcard_count) << ';'
                                     << pattern_length << ';'
                                     << searcher->name() << ';'
-                                    << test_result.duration << ';'
+                                    << test_result.duration.count() << ';'
                                     << test_result.char_comparisons << ';'
                                     << '\n';
 
                         std::cout << "\t\t\t---> Result: "
-                                  << test_result.duration
-                                  << ", char comparisons: "
+                                  << test_result.duration.count()
+                                  << "ms, char comparisons: "
                                   << test_result.char_comparisons
                                   << '\n';
                     }
