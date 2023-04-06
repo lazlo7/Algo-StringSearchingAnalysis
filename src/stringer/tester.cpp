@@ -1,6 +1,7 @@
 #include "tester.hpp"
 
 #include "searcher/naive_searcher.hpp"
+#include "searcher/kmp_searcher.hpp"
 
 #include "text_generator/uniform_text_generator.hpp"
 
@@ -10,13 +11,14 @@
 #include <fstream>
 #include <ios>
 #include <iostream>
-#include <random>
+#include <memory>
 #include <stdexcept>
 #include <vector>
 
 Tester::Tester()
 {
     _searchers.push_back(std::make_shared<NaiveSearcher>());
+    _searchers.push_back(std::make_shared<KMPSearcher>());
     _text_generators.push_back(std::make_shared<DNATextGenerator>());
 }
 
