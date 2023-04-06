@@ -15,7 +15,6 @@ public:
     };
 
     Tester(size_t test_repeat_count);
-    ~Tester() = default;
 
     void runTests(const std::string& output_filename);
     TestResult runTest(
