@@ -1,11 +1,10 @@
 #include "kmp_searcher.hpp"
 
-Searcher::Indices KMPSearcher::computePrefixes(const std::string& pattern, size_t& char_comparisons)
+Searcher::Indices KMPSearcher::search(const std::string& text, const std::string& pattern, size_t& char_comparisons)
 {   
+    // Compute prefix function.
     Indices prefixes(pattern.size());
-
-    for (size_t i = 1; i < pattern.size(); ++i) {
-        auto k = prefixes[i - 1];
+    for (size_t i = 1, k = 0; i < pattern.size(); ++i) {
         while (k > 0 && !compare(pattern[i], pattern[k], char_comparisons)) {
             k = prefixes[k - 1];
         }
@@ -17,18 +16,19 @@ Searcher::Indices KMPSearcher::computePrefixes(const std::string& pattern, size_
         prefixes[i] = k;
     }
 
-    return prefixes;
-}
-
-Searcher::Indices KMPSearcher::search(const std::string& text, const std::string& pattern, size_t& char_comparisons)
-{
-    const std::string needle = pattern + kAbsentChar + text;
-    const auto prefixes = computePrefixes(needle, char_comparisons);
+    // Compute result using prefix function.
     Indices indices;
+    for (size_t i = 0, k = 0; i < text.size(); ++i) {
+        while (k > 0 && !compare(pattern[k], text[i], char_comparisons)) {
+            k = prefixes[k - 1];
+        }
 
-    for (size_t i = 0; i < text.size(); ++i) {
-        if (prefixes[pattern.size() + i + 1] == pattern.length()) {
-            indices.push_back(i - pattern.size());
+        if (compare(pattern[k], text[i], char_comparisons)) {
+            ++k;
+        }
+
+        if (k == pattern.size()) {
+            indices.push_back(i - pattern.size() + 1);
         }
     }
 

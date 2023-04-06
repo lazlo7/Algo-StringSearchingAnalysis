@@ -10,6 +10,4 @@ public:
 
 private:
     static constexpr char kAbsentChar = '#';
-
-    Indices computePrefixes(const std::string& pattern, size_t& char_comparisons);
 };
