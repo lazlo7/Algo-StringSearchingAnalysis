@@ -14,8 +14,7 @@
 #include <stdexcept>
 #include <vector>
 
-Tester::Tester(size_t test_repeat_count)
-    : _test_repeat_count(test_repeat_count)
+Tester::Tester()
 {
     _searchers.push_back(std::make_shared<NaiveSearcher>());
     _text_generators.push_back(std::make_shared<DNATextGenerator>());
@@ -24,11 +23,12 @@ Tester::Tester(size_t test_repeat_count)
 Tester::TestResult Tester::runTest(
     const std::shared_ptr<Searcher>& searcher,
     const std::string& text,
-    const std::string& pattern)
+    const std::string& pattern,
+    size_t test_repeat_count)
 {
     TestResult test_result;
 
-    for (size_t i = 0; i < _test_repeat_count; ++i) {
+    for (size_t i = 0; i < test_repeat_count; ++i) {
         const auto start = std::chrono::high_resolution_clock::now();
         searcher->search(text, pattern, test_result.char_comparisons);
         const auto end = std::chrono::high_resolution_clock::now();
@@ -36,13 +36,16 @@ Tester::TestResult Tester::runTest(
         test_result.duration += std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
     }
 
-    test_result.duration /= _test_repeat_count;
-    test_result.char_comparisons = static_cast<size_t>(1.0 * test_result.char_comparisons / _test_repeat_count);
+    test_result.duration /= test_repeat_count;
+    test_result.char_comparisons = static_cast<size_t>(1.0 * test_result.char_comparisons / test_repeat_count);
 
     return test_result;
 }
 
-void Tester::runTests(const std::string& output_filename)
+void Tester::runTests(
+    const std::string& output_filename,
+    size_t test_repeat_count,
+    size_t pattern_repeat_count)
 {
     std::ofstream output_file { output_filename, std::ios_base::out | std::ios_base::trunc };
     if (!output_file.is_open()) {
@@ -71,10 +74,11 @@ void Tester::runTests(const std::string& output_filename)
                     std::fill(searcher_results.begin(), searcher_results.end(), TestResult {});
 
                     // Generate multiple patterns to diminish pattern-generation randomness involvement.
-                    for (size_t pattern_repeat = 0; pattern_repeat < kPatternRepeatCount; ++pattern_repeat) {
+                    for (size_t pattern_repeat = 0; pattern_repeat < pattern_repeat_count; ++pattern_repeat) {
                         const auto pattern = getRandomPattern(text, pattern_length, max_wildcard_count);
                         for (size_t searcher_index = 0; searcher_index < _searchers.size(); ++searcher_index) {
-                            const auto test_result = runTest(_searchers[searcher_index], text, pattern);
+                            const auto test_result
+                                = runTest(_searchers[searcher_index], text, pattern, test_repeat_count);
                             searcher_results[searcher_index].duration += test_result.duration;
                             searcher_results[searcher_index].char_comparisons += test_result.char_comparisons;
                         }
@@ -82,12 +86,12 @@ void Tester::runTests(const std::string& output_filename)
 
                     // Output test results for each searcher.
                     for (size_t searcher_index = 0; searcher_index < _searchers.size(); ++searcher_index) {
-                        const auto &searcher = _searchers[searcher_index];
+                        const auto& searcher = _searchers[searcher_index];
 
                         // Average out each accumulated result.
                         auto test_result = searcher_results[searcher_index];
-                        test_result.duration /= kPatternRepeatCount;
-                        test_result.char_comparisons = static_cast<size_t>(1.0 * test_result.char_comparisons / kPatternRepeatCount);
+                        test_result.duration /= pattern_repeat_count;
+                        test_result.char_comparisons = static_cast<size_t>(1.0 * test_result.char_comparisons / pattern_repeat_count);
 
                         std::cout << "Test #" << ++current_test_number << '\t'
                                   << "Text: [generator=" << text_generator->name()

@@ -10,21 +10,23 @@
 class Tester {
 public:
     struct TestResult {
-        std::chrono::nanoseconds duration{};
-        size_t char_comparisons{};
+        std::chrono::nanoseconds duration {};
+        size_t char_comparisons {};
     };
 
-    Tester(size_t test_repeat_count);
+    Tester();
 
-    void runTests(const std::string& output_filename);
+    void runTests(
+        const std::string& output_filename,
+        size_t test_repeat_count,
+        size_t pattern_repeat_count);
     TestResult runTest(
         const std::shared_ptr<Searcher>& searcher,
         const std::string& text,
-        const std::string& pattern);
+        const std::string& pattern,
+        size_t test_repeat_count);
 
 private:
-    static constexpr size_t kPatternRepeatCount = 100;
-
     static std::string getRandomPattern(
         const std::string& text,
         size_t pattern_length,
@@ -32,5 +34,4 @@ private:
 
     std::vector<std::shared_ptr<Searcher>> _searchers;
     std::vector<std::shared_ptr<TextGenerator>> _text_generators;
-    size_t _test_repeat_count;
 };
