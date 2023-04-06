@@ -35,7 +35,7 @@ int main(int argc, char** argv)
         std::cout << "Usage: ./stringer <output_filename> [-tr=<test_repeat_count>] [-pr=<pattern_repeat_count>]" << '\n'
                   << "\t<output_filename> - filename to write results to,\n"
                   << "\t<test_repeat_count> - how many times each test should be repeated [default = 100],\n"
-                  << "\t<pattern_repeat_count> - how many random patterns should be generated [default = 100]."
+                  << "\t<pattern_repeat_count> - how many random patterns should be generated [default = 100].\n"
                   << "Increasing <test_repeat_count> and <pattern_repeat_count> may lead to more precise results,\n"
                   << "however they are both performance-heavy"
                   << '\n';
