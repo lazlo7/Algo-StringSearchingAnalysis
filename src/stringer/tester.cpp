@@ -1,7 +1,7 @@
 #include "tester.hpp"
 
-#include "searcher/naive_searcher.hpp"
 #include "searcher/kmp_searcher.hpp"
+#include "searcher/naive_searcher.hpp"
 
 #include "text_generator/uniform_text_generator.hpp"
 
@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <chrono>
 #include <fstream>
+#include <iomanip>
 #include <ios>
 #include <iostream>
 #include <memory>
@@ -95,7 +96,9 @@ void Tester::runTests(
                         test_result.duration /= pattern_repeat_count;
                         test_result.char_comparisons = static_cast<size_t>(1.0 * test_result.char_comparisons / pattern_repeat_count);
 
-                        std::cout << "Test #" << ++current_test_number << '\t'
+                        // std::boolalpha for wildcards to use "true"/"false".
+                        std::cout << std::boolalpha
+                                  << "Test #" << ++current_test_number << '\t'
                                   << "Text: [generator=" << text_generator->name()
                                   << ", length=" << text_length << "] + "
                                   << searcher->name() << " searcher + "
@@ -103,7 +106,9 @@ void Tester::runTests(
                                   << ", length=" << pattern_length << ']'
                                   << '\n';
 
-                        output_file << text_generator->name() << ';'
+                        // std::boolalpha for wildcards to use "true"/"false".
+                        output_file << std::boolalpha
+                                    << text_generator->name() << ';'
                                     << text_length << ';'
                                     << static_cast<bool>(max_wildcard_count) << ';'
                                     << pattern_length << ';'
