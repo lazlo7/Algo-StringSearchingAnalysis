@@ -1,0 +1,721 @@
+text_generator;text_length;wildcards;pattern_length;searcher;test_result_duration_nano;test_result_char_comparisons
+DNA;10000;false;100;Naive;45860;13431
+DNA;10000;false;100;KMP (Standard Borders);36062;13478
+DNA;10000;false;100;KMP (Precise Borders);35507;13433
+DNA;10000;false;200;Naive;45520;13541
+DNA;10000;false;200;KMP (Standard Borders);36238;13684
+DNA;10000;false;200;KMP (Precise Borders);36408;13727
+DNA;10000;false;300;Naive;45517;13633
+DNA;10000;false;300;KMP (Standard Borders);36407;13868
+DNA;10000;false;300;KMP (Precise Borders);36693;13985
+DNA;10000;false;400;Naive;45516;13734
+DNA;10000;false;400;KMP (Standard Borders);36553;14066
+DNA;10000;false;400;KMP (Precise Borders);37429;14266
+DNA;10000;false;500;Naive;46179;13821
+DNA;10000;false;500;KMP (Standard Borders);37270;14257
+DNA;10000;false;500;KMP (Precise Borders);38186;14584
+DNA;10000;false;600;Naive;46815;13932
+DNA;10000;false;600;KMP (Standard Borders);38286;14477
+DNA;10000;false;600;KMP (Precise Borders);39634;14929
+DNA;10000;false;700;Naive;45843;14039
+DNA;10000;false;700;KMP (Standard Borders);37454;14683
+DNA;10000;false;700;KMP (Precise Borders);39330;15189
+DNA;10000;false;800;Naive;46024;14140
+DNA;10000;false;800;KMP (Standard Borders);37770;14880
+DNA;10000;false;800;KMP (Precise Borders);40115;15485
+DNA;10000;false;900;Naive;46004;14223
+DNA;10000;false;900;KMP (Standard Borders);38139;15061
+DNA;10000;false;900;KMP (Precise Borders);40820;15769
+DNA;10000;false;1000;Naive;46358;14337
+DNA;10000;false;1000;KMP (Standard Borders);38565;15274
+DNA;10000;false;1000;KMP (Precise Borders);41893;16058
+DNA;10000;false;1100;Naive;46334;14434
+DNA;10000;false;1100;KMP (Standard Borders);38704;15472
+DNA;10000;false;1100;KMP (Precise Borders);42344;16341
+DNA;10000;false;1200;Naive;46600;14537
+DNA;10000;false;1200;KMP (Standard Borders);39134;15678
+DNA;10000;false;1200;KMP (Precise Borders);43163;16676
+DNA;10000;false;1300;Naive;46887;14642
+DNA;10000;false;1300;KMP (Standard Borders);39532;15885
+DNA;10000;false;1300;KMP (Precise Borders);44016;16993
+DNA;10000;false;1400;Naive;46930;14738
+DNA;10000;false;1400;KMP (Standard Borders);39752;16079
+DNA;10000;false;1400;KMP (Precise Borders);44821;17279
+DNA;10000;false;1500;Naive;47075;14830
+DNA;10000;false;1500;KMP (Standard Borders);40163;16273
+DNA;10000;false;1500;KMP (Precise Borders);45464;17590
+DNA;10000;false;1600;Naive;47222;14931
+DNA;10000;false;1600;KMP (Standard Borders);40399;16469
+DNA;10000;false;1600;KMP (Precise Borders);46411;17826
+DNA;10000;false;1700;Naive;47172;15028
+DNA;10000;false;1700;KMP (Standard Borders);40545;16663
+DNA;10000;false;1700;KMP (Precise Borders);46683;18138
+DNA;10000;false;1800;Naive;47343;15129
+DNA;10000;false;1800;KMP (Standard Borders);40909;16860
+DNA;10000;false;1800;KMP (Precise Borders);47398;18440
+DNA;10000;false;1900;Naive;47822;15233
+DNA;10000;false;1900;KMP (Standard Borders);41588;17075
+DNA;10000;false;1900;KMP (Precise Borders);48566;18769
+DNA;10000;false;2000;Naive;47846;15317
+DNA;10000;false;2000;KMP (Standard Borders);41925;17265
+DNA;10000;false;2000;KMP (Precise Borders);49162;19094
+DNA;10000;false;2100;Naive;48126;15433
+DNA;10000;false;2100;KMP (Standard Borders);42280;17475
+DNA;10000;false;2100;KMP (Precise Borders);50121;19360
+DNA;10000;false;2200;Naive;48132;15534
+DNA;10000;false;2200;KMP (Standard Borders);42462;17675
+DNA;10000;false;2200;KMP (Precise Borders);50656;19703
+DNA;10000;false;2300;Naive;48398;15640
+DNA;10000;false;2300;KMP (Standard Borders);42961;17883
+DNA;10000;false;2300;KMP (Precise Borders);51580;20008
+DNA;10000;false;2400;Naive;48501;15721
+DNA;10000;false;2400;KMP (Standard Borders);43127;18059
+DNA;10000;false;2400;KMP (Precise Borders);51993;20307
+DNA;10000;false;2500;Naive;48764;15837
+DNA;10000;false;2500;KMP (Standard Borders);43567;18281
+DNA;10000;false;2500;KMP (Precise Borders);52984;20593
+DNA;10000;false;2600;Naive;48694;15944
+DNA;10000;false;2600;KMP (Standard Borders);43663;18471
+DNA;10000;false;2600;KMP (Precise Borders);53348;20749
+DNA;10000;false;2700;Naive;49044;16039
+DNA;10000;false;2700;KMP (Standard Borders);44131;18686
+DNA;10000;false;2700;KMP (Precise Borders);54375;21192
+DNA;10000;false;2800;Naive;49101;16128
+DNA;10000;false;2800;KMP (Standard Borders);44459;18870
+DNA;10000;false;2800;KMP (Precise Borders);55090;21450
+DNA;10000;false;2900;Naive;49378;16244
+DNA;10000;false;2900;KMP (Standard Borders);44990;19086
+DNA;10000;false;2900;KMP (Precise Borders);56140;21806
+DNA;10000;false;3000;Naive;49814;16331
+DNA;10000;false;3000;KMP (Standard Borders);45461;19284
+DNA;10000;false;3000;KMP (Precise Borders);56943;22107
+DNA;10000;true;100;Naive;49897;13823
+DNA;10000;true;100;KMP (Standard Borders);141987;44792
+DNA;10000;true;100;KMP (Precise Borders);137743;44408
+DNA;10000;true;200;Naive;48948;13537
+DNA;10000;true;200;KMP (Standard Borders);145438;45954
+DNA;10000;true;200;KMP (Precise Borders);141782;45684
+DNA;10000;true;300;Naive;48921;13434
+DNA;10000;true;300;KMP (Standard Borders);148082;47063
+DNA;10000;true;300;KMP (Precise Borders);145324;46762
+DNA;10000;true;400;Naive;48671;13466
+DNA;10000;true;400;KMP (Standard Borders);142094;45127
+DNA;10000;true;400;KMP (Precise Borders);140671;45044
+DNA;10000;true;500;Naive;48976;13512
+DNA;10000;true;500;KMP (Standard Borders);147677;47177
+DNA;10000;true;500;KMP (Precise Borders);145532;47194
+DNA;10000;true;600;Naive;48752;13545
+DNA;10000;true;600;KMP (Standard Borders);148527;47699
+DNA;10000;true;600;KMP (Precise Borders);147224;47746
+DNA;10000;true;700;Naive;48783;13621
+DNA;10000;true;700;KMP (Standard Borders);144188;46505
+DNA;10000;true;700;KMP (Precise Borders);142396;46588
+DNA;10000;true;800;Naive;49241;13679
+DNA;10000;true;800;KMP (Standard Borders);149133;47934
+DNA;10000;true;800;KMP (Precise Borders);147929;48244
+DNA;10000;true;900;Naive;49050;13592
+DNA;10000;true;900;KMP (Standard Borders);148749;48096
+DNA;10000;true;900;KMP (Precise Borders);147765;48446
+DNA;10000;true;1000;Naive;49364;13774
+DNA;10000;true;1000;KMP (Standard Borders);151478;49432
+DNA;10000;true;1000;KMP (Precise Borders);154324;49728
+DNA;10000;true;1100;Naive;49210;13707
+DNA;10000;true;1100;KMP (Standard Borders);153558;49591
+DNA;10000;true;1100;KMP (Precise Borders);153946;50202
+DNA;10000;true;1200;Naive;49452;13701
+DNA;10000;true;1200;KMP (Standard Borders);152853;49684
+DNA;10000;true;1200;KMP (Precise Borders);153188;50347
+DNA;10000;true;1300;Naive;49024;13741
+DNA;10000;true;1300;KMP (Standard Borders);148069;48499
+DNA;10000;true;1300;KMP (Precise Borders);149255;49251
+DNA;10000;true;1400;Naive;49100;13796
+DNA;10000;true;1400;KMP (Standard Borders);157266;51578
+DNA;10000;true;1400;KMP (Precise Borders);157901;52327
+DNA;10000;true;1500;Naive;49250;13815
+DNA;10000;true;1500;KMP (Standard Borders);156672;51604
+DNA;10000;true;1500;KMP (Precise Borders);158563;52559
+DNA;10000;true;1600;Naive;49398;13832
+DNA;10000;true;1600;KMP (Standard Borders);157064;51766
+DNA;10000;true;1600;KMP (Precise Borders);158816;52785
+DNA;10000;true;1700;Naive;49351;13824
+DNA;10000;true;1700;KMP (Standard Borders);160701;53264
+DNA;10000;true;1700;KMP (Precise Borders);162153;54318
+DNA;10000;true;1800;Naive;49643;13949
+DNA;10000;true;1800;KMP (Standard Borders);151159;50258
+DNA;10000;true;1800;KMP (Precise Borders);154902;51482
+DNA;10000;true;1900;Naive;49364;13946
+DNA;10000;true;1900;KMP (Standard Borders);153918;51205
+DNA;10000;true;1900;KMP (Precise Borders);157371;52515
+DNA;10000;true;2000;Naive;49186;13930
+DNA;10000;true;2000;KMP (Standard Borders);160969;54014
+DNA;10000;true;2000;KMP (Precise Borders);163985;55294
+DNA;10000;true;2100;Naive;49822;13957
+DNA;10000;true;2100;KMP (Standard Borders);171001;56606
+DNA;10000;true;2100;KMP (Precise Borders);176386;58185
+DNA;10000;true;2200;Naive;49919;14091
+DNA;10000;true;2200;KMP (Standard Borders);157284;52658
+DNA;10000;true;2200;KMP (Precise Borders);162075;54267
+DNA;10000;true;2300;Naive;49302;13892
+DNA;10000;true;2300;KMP (Standard Borders);168430;56392
+DNA;10000;true;2300;KMP (Precise Borders);172917;58102
+DNA;10000;true;2400;Naive;49528;13994
+DNA;10000;true;2400;KMP (Standard Borders);163888;55369
+DNA;10000;true;2400;KMP (Precise Borders);168052;57080
+DNA;10000;true;2500;Naive;49798;14082
+DNA;10000;true;2500;KMP (Standard Borders);152463;51945
+DNA;10000;true;2500;KMP (Precise Borders);158493;53752
+DNA;10000;true;2600;Naive;49711;14185
+DNA;10000;true;2600;KMP (Standard Borders);162202;54928
+DNA;10000;true;2600;KMP (Precise Borders);168201;56908
+DNA;10000;true;2700;Naive;49867;14173
+DNA;10000;true;2700;KMP (Standard Borders);155510;52956
+DNA;10000;true;2700;KMP (Precise Borders);162220;55064
+DNA;10000;true;2800;Naive;50167;14254
+DNA;10000;true;2800;KMP (Standard Borders);163534;55517
+DNA;10000;true;2800;KMP (Precise Borders);173177;57778
+DNA;10000;true;2900;Naive;50217;14409
+DNA;10000;true;2900;KMP (Standard Borders);158253;54076
+DNA;10000;true;2900;KMP (Precise Borders);168584;56351
+DNA;10000;true;3000;Naive;50103;14196
+DNA;10000;true;3000;KMP (Standard Borders);169071;57584
+DNA;10000;true;3000;KMP (Precise Borders);177688;59976
+DNA;100000;false;100;Naive;469743;133426
+DNA;100000;false;100;KMP (Standard Borders);408713;132951
+DNA;100000;false;100;KMP (Precise Borders);389418;131574
+DNA;100000;false;200;Naive;472210;133559
+DNA;100000;false;200;KMP (Standard Borders);410683;133258
+DNA;100000;false;200;KMP (Precise Borders);393084;132186
+DNA;100000;false;300;Naive;469161;133627
+DNA;100000;false;300;KMP (Standard Borders);407703;133316
+DNA;100000;false;300;KMP (Precise Borders);389262;132058
+DNA;100000;false;400;Naive;472229;133744
+DNA;100000;false;400;KMP (Standard Borders);411528;133668
+DNA;100000;false;400;KMP (Precise Borders);394322;132796
+DNA;100000;false;500;Naive;473232;133818
+DNA;100000;false;500;KMP (Standard Borders);413406;133766
+DNA;100000;false;500;KMP (Precise Borders);397168;132910
+DNA;100000;false;600;Naive;478202;133912
+DNA;100000;false;600;KMP (Standard Borders);419734;134101
+DNA;100000;false;600;KMP (Precise Borders);403239;133606
+DNA;100000;false;700;Naive;475598;134050
+DNA;100000;false;700;KMP (Standard Borders);417895;134330
+DNA;100000;false;700;KMP (Precise Borders);403436;133963
+DNA;100000;false;800;Naive;472766;134144
+DNA;100000;false;800;KMP (Standard Borders);414098;134403
+DNA;100000;false;800;KMP (Precise Borders);398096;133764
+DNA;100000;false;900;Naive;474407;134239
+DNA;100000;false;900;KMP (Standard Borders);416194;134672
+DNA;100000;false;900;KMP (Precise Borders);400519;134288
+DNA;100000;false;1000;Naive;475648;134331
+DNA;100000;false;1000;KMP (Standard Borders);418050;134891
+DNA;100000;false;1000;KMP (Precise Borders);403908;134721
+DNA;100000;false;1100;Naive;473124;134436
+DNA;100000;false;1100;KMP (Standard Borders);415177;135006
+DNA;100000;false;1100;KMP (Precise Borders);400531;134701
+DNA;100000;false;1200;Naive;471950;134530
+DNA;100000;false;1200;KMP (Standard Borders);413812;135148
+DNA;100000;false;1200;KMP (Precise Borders);398709;134722
+DNA;100000;false;1300;Naive;471668;134633
+DNA;100000;false;1300;KMP (Standard Borders);414037;135298
+DNA;100000;false;1300;KMP (Precise Borders);398382;134951
+DNA;100000;false;1400;Naive;474386;134724
+DNA;100000;false;1400;KMP (Standard Borders);417962;135609
+DNA;100000;false;1400;KMP (Precise Borders);403710;135733
+DNA;100000;false;1500;Naive;473878;134839
+DNA;100000;false;1500;KMP (Standard Borders);416744;135778
+DNA;100000;false;1500;KMP (Precise Borders);403061;135797
+DNA;100000;false;1600;Naive;471867;134914
+DNA;100000;false;1600;KMP (Standard Borders);413965;135876
+DNA;100000;false;1600;KMP (Precise Borders);400936;135751
+DNA;100000;false;1700;Naive;473395;135030
+DNA;100000;false;1700;KMP (Standard Borders);417238;136166
+DNA;100000;false;1700;KMP (Precise Borders);404887;136379
+DNA;100000;false;1800;Naive;477246;135118
+DNA;100000;false;1800;KMP (Standard Borders);420042;136434
+DNA;100000;false;1800;KMP (Precise Borders);407213;136896
+DNA;100000;false;1900;Naive;474741;135219
+DNA;100000;false;1900;KMP (Standard Borders);419236;136572
+DNA;100000;false;1900;KMP (Precise Borders);406834;136985
+DNA;100000;false;2000;Naive;474631;135309
+DNA;100000;false;2000;KMP (Standard Borders);417989;136745
+DNA;100000;false;2000;KMP (Precise Borders);406276;137358
+DNA;100000;false;2100;Naive;475174;135437
+DNA;100000;false;2100;KMP (Standard Borders);419339;137012
+DNA;100000;false;2100;KMP (Precise Borders);407897;137649
+DNA;100000;false;2200;Naive;473697;135512
+DNA;100000;false;2200;KMP (Standard Borders);417719;137117
+DNA;100000;false;2200;KMP (Precise Borders);408453;137773
+DNA;100000;false;2300;Naive;476252;135660
+DNA;100000;false;2300;KMP (Standard Borders);420742;137452
+DNA;100000;false;2300;KMP (Precise Borders);411072;138268
+DNA;100000;false;2400;Naive;472741;135714
+DNA;100000;false;2400;KMP (Standard Borders);415874;137436
+DNA;100000;false;2400;KMP (Precise Borders);405913;137959
+DNA;100000;false;2500;Naive;476386;135802
+DNA;100000;false;2500;KMP (Standard Borders);421337;137783
+DNA;100000;false;2500;KMP (Precise Borders);411914;138930
+DNA;100000;false;2600;Naive;474837;135939
+DNA;100000;false;2600;KMP (Standard Borders);419349;137963
+DNA;100000;false;2600;KMP (Precise Borders);411064;139021
+DNA;100000;false;2700;Naive;478101;136052
+DNA;100000;false;2700;KMP (Standard Borders);424006;138308
+DNA;100000;false;2700;KMP (Precise Borders);414974;139742
+DNA;100000;false;2800;Naive;476180;136145
+DNA;100000;false;2800;KMP (Standard Borders);421464;138400
+DNA;100000;false;2800;KMP (Precise Borders);412828;139739
+DNA;100000;false;2900;Naive;475432;136247
+DNA;100000;false;2900;KMP (Standard Borders);420783;138571
+DNA;100000;false;2900;KMP (Precise Borders);412816;139913
+DNA;100000;false;3000;Naive;474618;136307
+DNA;100000;false;3000;KMP (Standard Borders);420012;138710
+DNA;100000;false;3000;KMP (Precise Borders);411734;139969
+DNA;100000;true;100;Naive;510540;133807
+DNA;100000;true;100;KMP (Standard Borders);1447178;447358
+DNA;100000;true;100;KMP (Precise Borders);1402172;443357
+DNA;100000;true;200;Naive;512840;134448
+DNA;100000;true;200;KMP (Standard Borders);1485672;461051
+DNA;100000;true;200;KMP (Precise Borders);1433272;456706
+DNA;100000;true;300;Naive;510509;133915
+DNA;100000;true;300;KMP (Standard Borders);1446539;448226
+DNA;100000;true;300;KMP (Precise Borders);1390006;444155
+DNA;100000;true;400;Naive;508351;133571
+DNA;100000;true;400;KMP (Standard Borders);1496975;468043
+DNA;100000;true;400;KMP (Precise Borders);1435792;462624
+DNA;100000;true;500;Naive;512469;133750
+DNA;100000;true;500;KMP (Standard Borders);1471851;455607
+DNA;100000;true;500;KMP (Precise Borders);1413712;451839
+DNA;100000;true;600;Naive;513680;134594
+DNA;100000;true;600;KMP (Standard Borders);1481520;458743
+DNA;100000;true;600;KMP (Precise Borders);1423804;455165
+DNA;100000;true;700;Naive;507933;133518
+DNA;100000;true;700;KMP (Standard Borders);1457891;453375
+DNA;100000;true;700;KMP (Precise Borders);1402177;449311
+DNA;100000;true;800;Naive;511135;134073
+DNA;100000;true;800;KMP (Standard Borders);1520316;473477
+DNA;100000;true;800;KMP (Precise Borders);1464466;469322
+DNA;100000;true;900;Naive;510057;133698
+DNA;100000;true;900;KMP (Standard Borders);1537570;479348
+DNA;100000;true;900;KMP (Precise Borders);1483421;475203
+DNA;100000;true;1000;Naive;508303;133650
+DNA;100000;true;1000;KMP (Standard Borders);1548649;484827
+DNA;100000;true;1000;KMP (Precise Borders);1498255;480424
+DNA;100000;true;1100;Naive;509416;133683
+DNA;100000;true;1100;KMP (Standard Borders);1470492;458592
+DNA;100000;true;1100;KMP (Precise Borders);1423699;454541
+DNA;100000;true;1200;Naive;511079;133766
+DNA;100000;true;1200;KMP (Standard Borders);1448563;452369
+DNA;100000;true;1200;KMP (Precise Borders);1402028;448585
+DNA;100000;true;1300;Naive;503686;133661
+DNA;100000;true;1300;KMP (Standard Borders);1617271;508200
+DNA;100000;true;1300;KMP (Precise Borders);1557372;503448
+DNA;100000;true;1400;Naive;508525;133888
+DNA;100000;true;1400;KMP (Standard Borders);1505534;471647
+DNA;100000;true;1400;KMP (Precise Borders);1455767;468467
+DNA;100000;true;1500;Naive;508604;133790
+DNA;100000;true;1500;KMP (Standard Borders);1464295;459801
+DNA;100000;true;1500;KMP (Precise Borders);1412795;456157
+DNA;100000;true;1600;Naive;507586;133839
+DNA;100000;true;1600;KMP (Standard Borders);1483409;465564
+DNA;100000;true;1600;KMP (Precise Borders);1429165;462087
+DNA;100000;true;1700;Naive;505763;133935
+DNA;100000;true;1700;KMP (Standard Borders);1523532;480263
+DNA;100000;true;1700;KMP (Precise Borders);1474769;476785
+DNA;100000;true;1800;Naive;509895;133881
+DNA;100000;true;1800;KMP (Standard Borders);1459749;456673
+DNA;100000;true;1800;KMP (Precise Borders);1409536;453230
+DNA;100000;true;1900;Naive;511659;134000
+DNA;100000;true;1900;KMP (Standard Borders);1468838;457316
+DNA;100000;true;1900;KMP (Precise Borders);1416318;454679
+DNA;100000;true;2000;Naive;510297;133864
+DNA;100000;true;2000;KMP (Standard Borders);1566273;489464
+DNA;100000;true;2000;KMP (Precise Borders);1513720;486593
+DNA;100000;true;2100;Naive;513124;134001
+DNA;100000;true;2100;KMP (Standard Borders);1546914;481956
+DNA;100000;true;2100;KMP (Precise Borders);1494892;479577
+DNA;100000;true;2200;Naive;512312;133996
+DNA;100000;true;2200;KMP (Standard Borders);1487040;463563
+DNA;100000;true;2200;KMP (Precise Borders);1435857;461433
+DNA;100000;true;2300;Naive;509736;134072
+DNA;100000;true;2300;KMP (Standard Borders);1469088;459612
+DNA;100000;true;2300;KMP (Precise Borders);1415556;456920
+DNA;100000;true;2400;Naive;507653;134110
+DNA;100000;true;2400;KMP (Standard Borders);1527260;479746
+DNA;100000;true;2400;KMP (Precise Borders);1479648;476583
+DNA;100000;true;2500;Naive;511289;134137
+DNA;100000;true;2500;KMP (Standard Borders);1479879;461775
+DNA;100000;true;2500;KMP (Precise Borders);1437813;459996
+DNA;100000;true;2600;Naive;513245;134181
+DNA;100000;true;2600;KMP (Standard Borders);1499715;466325
+DNA;100000;true;2600;KMP (Precise Borders);1452645;465322
+DNA;100000;true;2700;Naive;509164;134137
+DNA;100000;true;2700;KMP (Standard Borders);1558774;488845
+DNA;100000;true;2700;KMP (Precise Borders);1506531;486478
+DNA;100000;true;2800;Naive;511933;134343
+DNA;100000;true;2800;KMP (Standard Borders);1545361;485101
+DNA;100000;true;2800;KMP (Precise Borders);1497951;482797
+DNA;100000;true;2900;Naive;510606;134456
+DNA;100000;true;2900;KMP (Standard Borders);1625335;511723
+DNA;100000;true;2900;KMP (Precise Borders);1574697;508880
+DNA;100000;true;3000;Naive;512573;135277
+DNA;100000;true;3000;KMP (Standard Borders);1471873;460569
+DNA;100000;true;3000;KMP (Precise Borders);1422883;458862
+Binary;10000;false;100;Naive;67624;20065
+Binary;10000;false;100;KMP (Standard Borders);57585;18726
+Binary;10000;false;100;KMP (Precise Borders);55411;17648
+Binary;10000;false;200;Naive;67747;20191
+Binary;10000;false;200;KMP (Standard Borders);57652;18861
+Binary;10000;false;200;KMP (Precise Borders);55947;17801
+Binary;10000;false;300;Naive;68117;20302
+Binary;10000;false;300;KMP (Standard Borders);57785;19043
+Binary;10000;false;300;KMP (Precise Borders);56557;18022
+Binary;10000;false;400;Naive;67973;20403
+Binary;10000;false;400;KMP (Standard Borders);58013;19234
+Binary;10000;false;400;KMP (Precise Borders);57443;18220
+Binary;10000;false;500;Naive;68041;20501
+Binary;10000;false;500;KMP (Standard Borders);58552;19470
+Binary;10000;false;500;KMP (Precise Borders);58689;18712
+Binary;10000;false;600;Naive;68243;20571
+Binary;10000;false;600;KMP (Standard Borders);58631;19636
+Binary;10000;false;600;KMP (Precise Borders);59278;18898
+Binary;10000;false;700;Naive;68340;20702
+Binary;10000;false;700;KMP (Standard Borders);59167;19891
+Binary;10000;false;700;KMP (Precise Borders);60608;19358
+Binary;10000;false;800;Naive;68578;20814
+Binary;10000;false;800;KMP (Standard Borders);59440;20057
+Binary;10000;false;800;KMP (Precise Borders);61324;19508
+Binary;10000;false;900;Naive;68766;20904
+Binary;10000;false;900;KMP (Standard Borders);59893;20282
+Binary;10000;false;900;KMP (Precise Borders);62433;20002
+Binary;10000;false;1000;Naive;69228;20987
+Binary;10000;false;1000;KMP (Standard Borders);60338;20574
+Binary;10000;false;1000;KMP (Precise Borders);64050;20360
+Binary;10000;false;1100;Naive;69350;21081
+Binary;10000;false;1100;KMP (Standard Borders);60225;20607
+Binary;10000;false;1100;KMP (Precise Borders);64498;20416
+Binary;10000;false;1200;Naive;69631;21210
+Binary;10000;false;1200;KMP (Standard Borders);60387;20847
+Binary;10000;false;1200;KMP (Precise Borders);64823;20695
+Binary;10000;false;1300;Naive;69852;21312
+Binary;10000;false;1300;KMP (Standard Borders);60963;21064
+Binary;10000;false;1300;KMP (Precise Borders);66163;21111
+Binary;10000;false;1400;Naive;69850;21401
+Binary;10000;false;1400;KMP (Standard Borders);61465;21319
+Binary;10000;false;1400;KMP (Precise Borders);67452;21538
+Binary;10000;false;1500;Naive;69683;21494
+Binary;10000;false;1500;KMP (Standard Borders);61455;21478
+Binary;10000;false;1500;KMP (Precise Borders);68181;21572
+Binary;10000;false;1600;Naive;69871;21637
+Binary;10000;false;1600;KMP (Standard Borders);61501;21483
+Binary;10000;false;1600;KMP (Precise Borders);68158;21689
+Binary;10000;false;1700;Naive;70103;21724
+Binary;10000;false;1700;KMP (Standard Borders);62232;21891
+Binary;10000;false;1700;KMP (Precise Borders);70169;22190
+Binary;10000;false;1800;Naive;70245;21784
+Binary;10000;false;1800;KMP (Standard Borders);62528;22069
+Binary;10000;false;1800;KMP (Precise Borders);71393;22575
+Binary;10000;false;1900;Naive;70199;21910
+Binary;10000;false;1900;KMP (Standard Borders);62729;22179
+Binary;10000;false;1900;KMP (Precise Borders);72081;22724
+Binary;10000;false;2000;Naive;70851;21995
+Binary;10000;false;2000;KMP (Standard Borders);63416;22483
+Binary;10000;false;2000;KMP (Precise Borders);72877;23358
+Binary;10000;false;2100;Naive;70731;22089
+Binary;10000;false;2100;KMP (Standard Borders);63339;22618
+Binary;10000;false;2100;KMP (Precise Borders);73592;23354
+Binary;10000;false;2200;Naive;71363;22199
+Binary;10000;false;2200;KMP (Standard Borders);63855;22823
+Binary;10000;false;2200;KMP (Precise Borders);74636;23676
+Binary;10000;false;2300;Naive;71735;22300
+Binary;10000;false;2300;KMP (Standard Borders);64626;23179
+Binary;10000;false;2300;KMP (Precise Borders);76462;24287
+Binary;10000;false;2400;Naive;71834;22392
+Binary;10000;false;2400;KMP (Standard Borders);64609;23308
+Binary;10000;false;2400;KMP (Precise Borders);77165;24435
+Binary;10000;false;2500;Naive;71589;22495
+Binary;10000;false;2500;KMP (Standard Borders);65222;23491
+Binary;10000;false;2500;KMP (Precise Borders);78793;24769
+Binary;10000;false;2600;Naive;71637;22576
+Binary;10000;false;2600;KMP (Standard Borders);65811;23833
+Binary;10000;false;2600;KMP (Precise Borders);79336;25391
+Binary;10000;false;2700;Naive;71589;22708
+Binary;10000;false;2700;KMP (Standard Borders);65310;23790
+Binary;10000;false;2700;KMP (Precise Borders);79846;25094
+Binary;10000;false;2800;Naive;71709;22809
+Binary;10000;false;2800;KMP (Standard Borders);65672;24000
+Binary;10000;false;2800;KMP (Precise Borders);81075;25441
+Binary;10000;false;2900;Naive;71842;22897
+Binary;10000;false;2900;KMP (Standard Borders);66206;24209
+Binary;10000;false;2900;KMP (Precise Borders);82133;25734
+Binary;10000;false;3000;Naive;71900;23002
+Binary;10000;false;3000;KMP (Standard Borders);66404;24333
+Binary;10000;false;3000;KMP (Precise Borders);82781;25973
+Binary;10000;true;100;Naive;74145;20347
+Binary;10000;true;100;KMP (Standard Borders);221778;63059
+Binary;10000;true;100;KMP (Precise Borders);213537;58943
+Binary;10000;true;200;Naive;74420;20457
+Binary;10000;true;200;KMP (Standard Borders);227411;64888
+Binary;10000;true;200;KMP (Precise Borders);219280;60717
+Binary;10000;true;300;Naive;74798;20177
+Binary;10000;true;300;KMP (Standard Borders);233408;67099
+Binary;10000;true;300;KMP (Precise Borders);225659;62898
+Binary;10000;true;400;Naive;74123;20234
+Binary;10000;true;400;KMP (Standard Borders);228692;65800
+Binary;10000;true;400;KMP (Precise Borders);222291;61865
+Binary;10000;true;500;Naive;73986;20316
+Binary;10000;true;500;KMP (Standard Borders);224800;64751
+Binary;10000;true;500;KMP (Precise Borders);218089;60715
+Binary;10000;true;600;Naive;73492;20182
+Binary;10000;true;600;KMP (Standard Borders);220000;63843
+Binary;10000;true;600;KMP (Precise Borders);214401;60219
+Binary;10000;true;700;Naive;73864;20271
+Binary;10000;true;700;KMP (Standard Borders);229080;66384
+Binary;10000;true;700;KMP (Precise Borders);223839;62607
+Binary;10000;true;800;Naive;73654;20217
+Binary;10000;true;800;KMP (Standard Borders);232389;67520
+Binary;10000;true;800;KMP (Precise Borders);226869;63483
+Binary;10000;true;900;Naive;73865;20354
+Binary;10000;true;900;KMP (Standard Borders);229902;66994
+Binary;10000;true;900;KMP (Precise Borders);225708;63479
+Binary;10000;true;1000;Naive;73849;20322
+Binary;10000;true;1000;KMP (Standard Borders);230020;67082
+Binary;10000;true;1000;KMP (Precise Borders);227092;63862
+Binary;10000;true;1100;Naive;73901;20374
+Binary;10000;true;1100;KMP (Standard Borders);222566;65177
+Binary;10000;true;1100;KMP (Precise Borders);220121;61980
+Binary;10000;true;1200;Naive;74311;20378
+Binary;10000;true;1200;KMP (Standard Borders);232301;68513
+Binary;10000;true;1200;KMP (Precise Borders);230892;65690
+Binary;10000;true;1300;Naive;74305;20540
+Binary;10000;true;1300;KMP (Standard Borders);218265;64513
+Binary;10000;true;1300;KMP (Precise Borders);217086;61535
+Binary;10000;true;1400;Naive;74315;20462
+Binary;10000;true;1400;KMP (Standard Borders);232549;68553
+Binary;10000;true;1400;KMP (Precise Borders);230871;65291
+Binary;10000;true;1500;Naive;74530;20539
+Binary;10000;true;1500;KMP (Standard Borders);235933;69772
+Binary;10000;true;1500;KMP (Precise Borders);235844;66680
+Binary;10000;true;1600;Naive;74457;20664
+Binary;10000;true;1600;KMP (Standard Borders);227151;67560
+Binary;10000;true;1600;KMP (Precise Borders);226875;64849
+Binary;10000;true;1700;Naive;74067;20466
+Binary;10000;true;1700;KMP (Standard Borders);232751;69081
+Binary;10000;true;1700;KMP (Precise Borders);233096;66082
+Binary;10000;true;1800;Naive;74216;20483
+Binary;10000;true;1800;KMP (Standard Borders);246766;73415
+Binary;10000;true;1800;KMP (Precise Borders);247075;70458
+Binary;10000;true;1900;Naive;74387;20517
+Binary;10000;true;1900;KMP (Standard Borders);241401;72018
+Binary;10000;true;1900;KMP (Precise Borders);243025;69295
+Binary;10000;true;2000;Naive;74734;20792
+Binary;10000;true;2000;KMP (Standard Borders);234316;70174
+Binary;10000;true;2000;KMP (Precise Borders);236988;67596
+Binary;10000;true;2100;Naive;74488;20644
+Binary;10000;true;2100;KMP (Standard Borders);228859;68793
+Binary;10000;true;2100;KMP (Precise Borders);231932;66574
+Binary;10000;true;2200;Naive;74789;20644
+Binary;10000;true;2200;KMP (Standard Borders);237595;71536
+Binary;10000;true;2200;KMP (Precise Borders);241702;69462
+Binary;10000;true;2300;Naive;74499;20639
+Binary;10000;true;2300;KMP (Standard Borders);246399;74042
+Binary;10000;true;2300;KMP (Precise Borders);249894;71595
+Binary;10000;true;2400;Naive;74428;20659
+Binary;10000;true;2400;KMP (Standard Borders);232632;70464
+Binary;10000;true;2400;KMP (Precise Borders);238370;68717
+Binary;10000;true;2500;Naive;74678;20762
+Binary;10000;true;2500;KMP (Standard Borders);242614;73507
+Binary;10000;true;2500;KMP (Precise Borders);248095;71709
+Binary;10000;true;2600;Naive;74678;20764
+Binary;10000;true;2600;KMP (Standard Borders);235266;71478
+Binary;10000;true;2600;KMP (Precise Borders);240942;69467
+Binary;10000;true;2700;Naive;74860;20862
+Binary;10000;true;2700;KMP (Standard Borders);237550;72303
+Binary;10000;true;2700;KMP (Precise Borders);244495;70480
+Binary;10000;true;2800;Naive;75077;21043
+Binary;10000;true;2800;KMP (Standard Borders);240475;73352
+Binary;10000;true;2800;KMP (Precise Borders);247546;71677
+Binary;10000;true;2900;Naive;74879;20842
+Binary;10000;true;2900;KMP (Standard Borders);242298;73924
+Binary;10000;true;2900;KMP (Precise Borders);250009;72293
+Binary;10000;true;3000;Naive;75191;20878
+Binary;10000;true;3000;KMP (Standard Borders);225785;69163
+Binary;10000;true;3000;KMP (Precise Borders);234174;68122
+Binary;100000;false;100;Naive;708739;200087
+Binary;100000;false;100;KMP (Standard Borders);625999;182955
+Binary;100000;false;100;KMP (Precise Borders);597418;168573
+Binary;100000;false;200;Naive;708947;200161
+Binary;100000;false;200;KMP (Standard Borders);627017;185339
+Binary;100000;false;200;KMP (Precise Borders);602364;172514
+Binary;100000;false;300;Naive;707088;200327
+Binary;100000;false;300;KMP (Standard Borders);625930;184854
+Binary;100000;false;300;KMP (Precise Borders);597970;170191
+Binary;100000;false;400;Naive;707242;200463
+Binary;100000;false;400;KMP (Standard Borders);626040;185199
+Binary;100000;false;400;KMP (Precise Borders);604355;173329
+Binary;100000;false;500;Naive;715179;200557
+Binary;100000;false;500;KMP (Standard Borders);633998;185284
+Binary;100000;false;500;KMP (Precise Borders);609177;172413
+Binary;100000;false;600;Naive;714723;200550
+Binary;100000;false;600;KMP (Standard Borders);634826;185296
+Binary;100000;false;600;KMP (Precise Borders);611198;172607
+Binary;100000;false;700;Naive;716788;200696
+Binary;100000;false;700;KMP (Standard Borders);635933;186474
+Binary;100000;false;700;KMP (Precise Borders);614942;174712
+Binary;100000;false;800;Naive;716909;200960
+Binary;100000;false;800;KMP (Standard Borders);637538;187611
+Binary;100000;false;800;KMP (Precise Borders);620912;177666
+Binary;100000;false;900;Naive;716890;200857
+Binary;100000;false;900;KMP (Standard Borders);632314;185048
+Binary;100000;false;900;KMP (Precise Borders);610326;172110
+Binary;100000;false;1000;Naive;716916;200902
+Binary;100000;false;1000;KMP (Standard Borders);633973;185632
+Binary;100000;false;1000;KMP (Precise Borders);615088;173808
+Binary;100000;false;1100;Naive;716079;201125
+Binary;100000;false;1100;KMP (Standard Borders);635108;186528
+Binary;100000;false;1100;KMP (Precise Borders);615669;174317
+Binary;100000;false;1200;Naive;717386;201166
+Binary;100000;false;1200;KMP (Standard Borders);637464;186372
+Binary;100000;false;1200;KMP (Precise Borders);618647;174125
+Binary;100000;false;1300;Naive;720057;201288
+Binary;100000;false;1300;KMP (Standard Borders);640521;188446
+Binary;100000;false;1300;KMP (Precise Borders);622906;176968
+Binary;100000;false;1400;Naive;717600;201394
+Binary;100000;false;1400;KMP (Standard Borders);637585;186701
+Binary;100000;false;1400;KMP (Precise Borders);619465;174341
+Binary;100000;false;1500;Naive;717180;201467
+Binary;100000;false;1500;KMP (Standard Borders);637311;187012
+Binary;100000;false;1500;KMP (Precise Borders);618523;174166
+Binary;100000;false;1600;Naive;717507;201605
+Binary;100000;false;1600;KMP (Standard Borders);638098;187436
+Binary;100000;false;1600;KMP (Precise Borders);619928;175074
+Binary;100000;false;1700;Naive;717987;201730
+Binary;100000;false;1700;KMP (Standard Borders);640272;188646
+Binary;100000;false;1700;KMP (Precise Borders);625308;177714
+Binary;100000;false;1800;Naive;717052;201817
+Binary;100000;false;1800;KMP (Standard Borders);639796;188655
+Binary;100000;false;1800;KMP (Precise Borders);625117;177377
+Binary;100000;false;1900;Naive;718748;201954
+Binary;100000;false;1900;KMP (Standard Borders);639297;188525
+Binary;100000;false;1900;KMP (Precise Borders);624610;177127
+Binary;100000;false;2000;Naive;717777;202055
+Binary;100000;false;2000;KMP (Standard Borders);640524;189477
+Binary;100000;false;2000;KMP (Precise Borders);626459;178167
+Binary;100000;false;2100;Naive;719076;202168
+Binary;100000;false;2100;KMP (Standard Borders);639503;189428
+Binary;100000;false;2100;KMP (Precise Borders);626886;179325
+Binary;100000;false;2200;Naive;720179;202238
+Binary;100000;false;2200;KMP (Standard Borders);642318;189852
+Binary;100000;false;2200;KMP (Precise Borders);631257;179864
+Binary;100000;false;2300;Naive;719363;202336
+Binary;100000;false;2300;KMP (Standard Borders);640256;189752
+Binary;100000;false;2300;KMP (Precise Borders);628156;179030
+Binary;100000;false;2400;Naive;721355;202336
+Binary;100000;false;2400;KMP (Standard Borders);643913;191434
+Binary;100000;false;2400;KMP (Precise Borders);630602;180707
+Binary;100000;false;2500;Naive;718693;202407
+Binary;100000;false;2500;KMP (Standard Borders);642128;189924
+Binary;100000;false;2500;KMP (Precise Borders);630330;179276
+Binary;100000;false;2600;Naive;724415;202589
+Binary;100000;false;2600;KMP (Standard Borders);646279;189947
+Binary;100000;false;2600;KMP (Precise Borders);637685;180179
+Binary;100000;false;2700;Naive;722106;202751
+Binary;100000;false;2700;KMP (Standard Borders);645223;191211
+Binary;100000;false;2700;KMP (Precise Borders);637939;182464
+Binary;100000;false;2800;Naive;724530;202775
+Binary;100000;false;2800;KMP (Standard Borders);647845;190392
+Binary;100000;false;2800;KMP (Precise Borders);634910;179778
+Binary;100000;false;2900;Naive;716266;202903
+Binary;100000;false;2900;KMP (Standard Borders);636322;189364
+Binary;100000;false;2900;KMP (Precise Borders);626337;178195
+Binary;100000;false;3000;Naive;713156;202923
+Binary;100000;false;3000;KMP (Standard Borders);636600;191078
+Binary;100000;false;3000;KMP (Precise Borders);630684;181688
+Binary;100000;true;100;Naive;781153;204644
+Binary;100000;true;100;KMP (Standard Borders);2343507;649041
+Binary;100000;true;100;KMP (Precise Borders);2255479;605841
+Binary;100000;true;200;Naive;777317;202905
+Binary;100000;true;200;KMP (Standard Borders);2311903;652180
+Binary;100000;true;200;KMP (Precise Borders);2223815;610390
+Binary;100000;true;300;Naive;773125;200823
+Binary;100000;true;300;KMP (Standard Borders);2284344;646428
+Binary;100000;true;300;KMP (Precise Borders);2189749;601430
+Binary;100000;true;400;Naive;773118;200126
+Binary;100000;true;400;KMP (Standard Borders);2364249;669787
+Binary;100000;true;400;KMP (Precise Borders);2271890;624778
+Binary;100000;true;500;Naive;774425;201461
+Binary;100000;true;500;KMP (Standard Borders);2231186;632730
+Binary;100000;true;500;KMP (Precise Borders);2136989;588056
+Binary;100000;true;600;Naive;776087;200673
+Binary;100000;true;600;KMP (Standard Borders);2328945;659805
+Binary;100000;true;600;KMP (Precise Borders);2233601;614447
+Binary;100000;true;700;Naive;773196;200379
+Binary;100000;true;700;KMP (Standard Borders);2210419;625255
+Binary;100000;true;700;KMP (Precise Borders);2113084;579469
+Binary;100000;true;800;Naive;775823;200264
+Binary;100000;true;800;KMP (Standard Borders);2231968;632593
+Binary;100000;true;800;KMP (Precise Borders);2141149;590242
+Binary;100000;true;900;Naive;774493;200392
+Binary;100000;true;900;KMP (Standard Borders);2250379;639134
+Binary;100000;true;900;KMP (Precise Borders);2158903;595980
+Binary;100000;true;1000;Naive;773499;200273
+Binary;100000;true;1000;KMP (Standard Borders);2284185;649162
+Binary;100000;true;1000;KMP (Precise Borders);2195592;605856
+Binary;100000;true;1100;Naive;774097;200885
+Binary;100000;true;1100;KMP (Standard Borders);2268733;645147
+Binary;100000;true;1100;KMP (Precise Borders);2179466;601738
+Binary;100000;true;1200;Naive;775241;201347
+Binary;100000;true;1200;KMP (Standard Borders);2440906;699067
+Binary;100000;true;1200;KMP (Precise Borders);2350528;655487
+Binary;100000;true;1300;Naive;774999;200401
+Binary;100000;true;1300;KMP (Standard Borders);2325145;660796
+Binary;100000;true;1300;KMP (Precise Borders);2230952;614310
+Binary;100000;true;1400;Naive;774775;201059
+Binary;100000;true;1400;KMP (Standard Borders);2325631;662396
+Binary;100000;true;1400;KMP (Precise Borders);2233045;617175
+Binary;100000;true;1500;Naive;773148;200565
+Binary;100000;true;1500;KMP (Standard Borders);2246856;640729
+Binary;100000;true;1500;KMP (Precise Borders);2161402;598323
+Binary;100000;true;1600;Naive;773525;200509
+Binary;100000;true;1600;KMP (Standard Borders);2204359;627325
+Binary;100000;true;1600;KMP (Precise Borders);2116290;584192
+Binary;100000;true;1700;Naive;774137;200568
+Binary;100000;true;1700;KMP (Standard Borders);2304439;658805
+Binary;100000;true;1700;KMP (Precise Borders);2219862;616996
+Binary;100000;true;1800;Naive;773175;200659
+Binary;100000;true;1800;KMP (Standard Borders);2221131;634502
+Binary;100000;true;1800;KMP (Precise Borders);2138474;592066
+Binary;100000;true;1900;Naive;773529;200666
+Binary;100000;true;1900;KMP (Standard Borders);2137316;609676
+Binary;100000;true;1900;KMP (Precise Borders);2059606;569186
+Binary;100000;true;2000;Naive;774177;201090
+Binary;100000;true;2000;KMP (Standard Borders);2377248;677595
+Binary;100000;true;2000;KMP (Precise Borders);2286672;631807
+Binary;100000;true;2100;Naive;773514;200641
+Binary;100000;true;2100;KMP (Standard Borders);2355783;672514
+Binary;100000;true;2100;KMP (Precise Borders);2264745;625965
+Binary;100000;true;2200;Naive;773549;200942
+Binary;100000;true;2200;KMP (Standard Borders);2248629;643385
+Binary;100000;true;2200;KMP (Precise Borders);2170523;603597
+Binary;100000;true;2300;Naive;775764;200913
+Binary;100000;true;2300;KMP (Standard Borders);2283244;653014
+Binary;100000;true;2300;KMP (Precise Borders);2200441;610231
+Binary;100000;true;2400;Naive;772861;200925
+Binary;100000;true;2400;KMP (Standard Borders);2341869;670604
+Binary;100000;true;2400;KMP (Precise Borders);2259948;628431
+Binary;100000;true;2500;Naive;773126;200706
+Binary;100000;true;2500;KMP (Standard Borders);2221991;634064
+Binary;100000;true;2500;KMP (Precise Borders);2138784;591990
+Binary;100000;true;2600;Naive;773442;200845
+Binary;100000;true;2600;KMP (Standard Borders);2273005;648858
+Binary;100000;true;2600;KMP (Precise Borders);2191398;606603
+Binary;100000;true;2700;Naive;774011;200746
+Binary;100000;true;2700;KMP (Standard Borders);2260979;645701
+Binary;100000;true;2700;KMP (Precise Borders);2179211;604309
+Binary;100000;true;2800;Naive;774437;200761
+Binary;100000;true;2800;KMP (Standard Borders);2225541;636903
+Binary;100000;true;2800;KMP (Precise Borders);2148465;595865
+Binary;100000;true;2900;Naive;775440;201162
+Binary;100000;true;2900;KMP (Standard Borders);2332432;669429
+Binary;100000;true;2900;KMP (Precise Borders);2258532;631322
+Binary;100000;true;3000;Naive;774304;201370
+Binary;100000;true;3000;KMP (Standard Borders);2206775;630071
+Binary;100000;true;3000;KMP (Precise Borders);2133071;590846
