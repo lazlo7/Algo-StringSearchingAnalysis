@@ -22,6 +22,7 @@ Tester::Tester()
     _searchers.push_back(std::make_shared<KMPSearcher>());
     _searchers.push_back(std::make_shared<KMPPreciseBordersSearcher>());
     _text_generators.push_back(std::make_shared<DNATextGenerator>());
+    _text_generators.push_back(std::make_shared<BinaryTextGenerator>());
 }
 
 Tester::TestResult Tester::runTest(

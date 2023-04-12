@@ -21,3 +21,10 @@ public:
     ~DNATextGenerator() = default;
     virtual const char* name() const override;
 };
+
+class BinaryTextGenerator : public UniformTextGenerator {
+public:
+    BinaryTextGenerator();
+    ~BinaryTextGenerator() = default;
+    virtual const char* name() const override;
+};

@@ -29,7 +29,16 @@ DNATextGenerator::DNATextGenerator()
 {
 }
 
+BinaryTextGenerator::BinaryTextGenerator() : UniformTextGenerator("01")
+{
+}
+
 const char* DNATextGenerator::name() const
 {
     return "DNA";
+}
+
+const char* BinaryTextGenerator::name() const
+{
+    return "Binary";
 }
