@@ -27,7 +27,7 @@
 
 Обзор файлов:
 - `./src/stringer`: исходники `stringer` на `C++`;
-- `./src/plotter`: исходники `plotter` на `Python 3.10`;
+- `./src/plotter.ipynb`: исходники `plotter` на `Jupyter Notebook: Python 3.10`;
 - `.clangd`: конфигурационный файл для языкового сервера `clangd`;
 - `build.sh`: скрипт сборки `stringer`;
 - `report.md`: краткий текстовый отчет о работе.
