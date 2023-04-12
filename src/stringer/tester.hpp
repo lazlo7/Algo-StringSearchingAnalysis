@@ -24,6 +24,7 @@ public:
         const std::shared_ptr<Searcher>& searcher,
         const std::string& text,
         const std::string& pattern,
+        bool wildcards,
         size_t test_repeat_count);
 
 private:

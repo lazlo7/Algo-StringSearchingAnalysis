@@ -1,1 +1,3 @@
 - Add proper error reporting for cmd-line arguments parsing
+- FIXME: Clean code in KMPSearcher (too much code duplication)
+ 

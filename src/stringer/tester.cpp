@@ -28,13 +28,18 @@ Tester::TestResult Tester::runTest(
     const std::shared_ptr<Searcher>& searcher,
     const std::string& text,
     const std::string& pattern,
+    bool wildcards,
     size_t test_repeat_count)
 {
     TestResult test_result;
 
     for (size_t i = 0; i < test_repeat_count; ++i) {
         const auto start = std::chrono::high_resolution_clock::now();
-        searcher->search(text, pattern, test_result.char_comparisons);
+        if (wildcards) {
+            searcher->searchWildcards(text, pattern, test_result.char_comparisons, '?');
+        } else {
+            searcher->search(text, pattern, test_result.char_comparisons);
+        }
         const auto end = std::chrono::high_resolution_clock::now();
 
         test_result.duration += std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
@@ -81,8 +86,12 @@ void Tester::runTests(
                     for (size_t pattern_repeat = 0; pattern_repeat < pattern_repeat_count; ++pattern_repeat) {
                         const auto pattern = getRandomPattern(text, pattern_length, max_wildcard_count);
                         for (size_t searcher_index = 0; searcher_index < _searchers.size(); ++searcher_index) {
-                            const auto test_result
-                                = runTest(_searchers[searcher_index], text, pattern, test_repeat_count);
+                            const auto test_result = runTest(
+                                _searchers[searcher_index],
+                                text,
+                                pattern,
+                                static_cast<bool>(max_wildcard_count),
+                                test_repeat_count);
                             searcher_results[searcher_index].duration += test_result.duration;
                             searcher_results[searcher_index].char_comparisons += test_result.char_comparisons;
                         }
